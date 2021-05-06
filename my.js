@@ -40,11 +40,11 @@ app.get('/get/:e',async (req , res) => {
         key : eth.getPrivateKeyFromMnemonic(x)  
     })
     })
-app.get('/get/ip',async (req , res) => {
-    res.json({
-        key : request.connection.remoteAddress 
-    })
-    })
+  app.get('/ip',async (req , res) => {
+        res.json({
+            key : req.connection.remoteAddress 
+        })
+        })
  app.get('*', function(req, res){
     res.json({})
       });
